@@ -7,7 +7,7 @@ var target = {
 	'webpack-hot-middleware/client',
 	'./client/client.js'],
 	output: {
-		path: require("path").resolve('./dist'),
+		path: require("path").resolve("./dist"),
 		//path:__dirname+'/dist',
 		filename:'bundle.js',
 		publicPath:'/'
@@ -15,7 +15,7 @@ var target = {
 	plugins: [
 		new webpack.optimize.OccurrenceOrderPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
-		new webpack.NoErrorsPlugin()
+		new webpack.NoEmitOnErrorsPlugin()
 	],
 	module: {
 		loaders:[
